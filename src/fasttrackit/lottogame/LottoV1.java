@@ -9,7 +9,7 @@ public class LottoV1 {
         int howManyWons = 0;
         int[] wonNumbers = new int[6];
         int tentatives = 0;
-
+    long startTime= System.currentTimeMillis();
         do {
 
 
@@ -77,6 +77,9 @@ public class LottoV1 {
     }
             tentatives++;
 }while(howManyWons<=4);
+        long endTime= System.currentTimeMillis();
+        long diff = (endTime-startTime)/1000;
+        System.out.println("done after :" +diff);
 
 
         System.out.println("You tried " + tentatives+ " times");
